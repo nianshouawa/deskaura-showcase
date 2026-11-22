@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DeskAura // 让陪伴，出现在桌面 · Windows 3D 桌面伴侣</title>
+    <meta name="description" content="DeskAura 是一个本地优先的 Windows 桌面虚拟数字人伴侣。导入你的 VRM 模型，独立配置人设、记忆与本地听觉，在桌面一角安静待命。" />
+
+    <!-- Favicon: DeskAura Official Icon -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+
+    <!-- Anti-FOUC Theme Initialization Script -->
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem('deskaura-theme') || 'system';
+          var isDark = true;
+          if (saved === 'dark') {
+            isDark = true;
+          } else if (saved === 'light') {
+            isDark = false;
+          } else {
+            isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          }
+          var theme = isDark ? 'dark' : 'light';
+          document.documentElement.setAttribute('data-theme', theme);
+          if (isDark) {
+            document.documentElement.classList.add('dark');
+            document.documentElement.classList.remove('light');
+          } else {
+            document.documentElement.classList.add('light');
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="bg-[var(--bg-canvas)] text-[var(--text-primary)] antialiased transition-colors duration-200">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
