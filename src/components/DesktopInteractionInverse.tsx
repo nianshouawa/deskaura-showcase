@@ -544,8 +544,9 @@ const Tab01BoundingSphere: React.FC = () => {
     }
   }, [mocapStream]);
 
-  // 3. Load MediaPipe PoseLandmarker from local /mediapipe/
+  // 3. Load MediaPipe PoseLandmarker from local /mediapipe/ (Lazy loaded on demand)
   useEffect(() => {
+    if (interactionMode !== 'mocap' || landmarkerRef.current) return;
     let isMounted = true;
     const initPose = async () => {
       try {
@@ -577,7 +578,7 @@ const Tab01BoundingSphere: React.FC = () => {
         landmarkerRef.current = null;
       }
     };
-  }, []);
+  }, [interactionMode]);
 
   // Handle fine-tuning slider adjustments in manual mode with strict motionSafety checks
   const handleSliderChange = (axis: 'pitch' | 'yaw' | 'roll', val: number) => {
