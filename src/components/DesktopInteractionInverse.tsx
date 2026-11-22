@@ -549,11 +549,12 @@ const Tab01BoundingSphere: React.FC = () => {
     let isMounted = true;
     const initPose = async () => {
       try {
-        const vision = await FilesetResolver.forVisionTasks('/mediapipe/wasm');
+        const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+        const vision = await FilesetResolver.forVisionTasks(`${base}mediapipe/wasm`);
         if (!isMounted) return;
         const landmarker = await PoseLandmarker.createFromOptions(vision, {
           baseOptions: {
-            modelAssetPath: '/mediapipe/pose_landmarker_lite.task',
+            modelAssetPath: `${base}mediapipe/pose_landmarker_lite.task`,
             delegate: 'GPU',
           },
           runningMode: 'VIDEO',
@@ -2006,10 +2007,11 @@ const Tab02GazeTracker: React.FC = () => {
 
       // Lazy load MediaPipe FilesetResolver & FaceDetector if not yet loaded
       if (!detectorRef.current) {
-        const vision = await FilesetResolver.forVisionTasks('/mediapipe/wasm');
+        const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
+        const vision = await FilesetResolver.forVisionTasks(`${base}mediapipe/wasm`);
         detectorRef.current = await FaceDetector.createFromOptions(vision, {
           baseOptions: {
-            modelAssetPath: '/mediapipe/blaze_face_short_range.tflite',
+            modelAssetPath: `${base}blaze_face_short_range.tflite`.includes('mediapipe') ? `${base}mediapipe/blaze_face_short_range.tflite` : `${base}mediapipe/blaze_face_short_range.tflite`,
           },
           runningMode: 'VIDEO',
           minDetectionConfidence: 0.5,

@@ -109,7 +109,7 @@ export const Hero: React.FC = () => {
               >
                 {/* Real DeskAura Studio + Desktop Companion Screenshot */}
                 <img
-                  src="/images/hero-real.png"
+                  src={`${import.meta.env.BASE_URL}images/hero-real.png`}
                   alt="DeskAura 实机运行截图"
                   className="w-full h-full object-contain object-center transition-transform duration-300 ease-out group-hover:scale-[1.01]"
                 />
@@ -182,7 +182,7 @@ export const Hero: React.FC = () => {
             </div>
             <div className="p-2 overflow-auto max-h-[85vh] flex items-center justify-center bg-[#0B0C10]">
               <img
-                src="/images/hero-real.png"
+                src={`${import.meta.env.BASE_URL}images/hero-real.png`}
                 alt="DeskAura 实机运行原图"
                 className="w-full h-auto max-h-[80vh] object-contain rounded"
               />

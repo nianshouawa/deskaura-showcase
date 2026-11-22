@@ -394,7 +394,7 @@ export const CompanionStudioWindow: React.FC = () => {
                   /* 1. Full Studio Overview Mode */
                   <div className="relative w-full h-full min-h-[320px] flex items-center justify-center p-2 bg-[#08090D]">
                     <img
-                      src="/images/hero-real.png"
+                      src={`${import.meta.env.BASE_URL}images/hero-real.png`}
                       alt="DeskAura Studio Real View"
                       className="w-full h-full max-h-[300px] object-contain object-center filter brightness-95 rounded shadow-lg"
                     />
