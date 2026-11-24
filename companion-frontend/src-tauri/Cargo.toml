@@ -1,0 +1,26 @@
+[package]
+name = "deskaura"
+version = "0.1.0"
+edition = "2021"
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["tray-icon", "protocol-asset"] }
+tauri-plugin-shell = "2"
+tauri-plugin-single-instance = "2"
+
+[dev-dependencies]
+tauri-runtime = "2.11.3"
+tauri-runtime-wry = "2.11.4"
+
+[target.'cfg(windows)'.dependencies]
+windows = { version = "0.61.3", features = ["Win32_System_Com", "Win32_UI_Shell", "Win32_UI_Shell_Common", "Win32_UI_WindowsAndMessaging", "Win32_Foundation"] }
+webview2-com = "0.38.2"
+
+# 固化 Windows 透明窗口补丁：tauri-runtime-wry 默认不暴露 no_redirection_bitmap，
+# 导致 WebView2 透明背景失效（深灰背景）。vendor 后的源码在 transparent() 里追加了
+# with_no_redirection_bitmap(transparent)，实现真透明。见 vendor/tauri-runtime-wry/src/lib.rs
+[patch.crates-io]
+tauri-runtime-wry = { path = "vendor/tauri-runtime-wry" }

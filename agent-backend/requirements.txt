@@ -1,0 +1,15 @@
+fastapi==0.115.6
+uvicorn[standard]==0.32.1
+pydantic>=2.12.4,<3
+httpx==0.28.1
+openai>=2.29,<4
+langgraph==0.2.60
+pytest==8.3.4
+keyring==25.7.0
+pypdf>=6,<7
+python-docx==1.2.0
+onnxruntime==1.31.1
+tokenizers==0.23.3
+sherpa-onnx==2.0.1
+mcp==1.30.0
+sse-starlette==2.4.1

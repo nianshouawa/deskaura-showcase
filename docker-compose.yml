@@ -1,0 +1,62 @@
+services:
+  memory-service:
+    build: ./memory-service
+    environment:
+      MEMORY_DATABASE_PATH: /data/memory.db
+    volumes:
+      - memory-data:/data
+    ports:
+      - "8001:8001"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8001/health')"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+  motion-service:
+    build: ./motion-service
+    environment:
+      MOTION_DATABASE_PATH: /data/motions.db
+      ENABLE_HY_MOTION: "false"
+      OLLAMA_BASE_URL: ${OLLAMA_BASE_URL:-http://host.docker.internal:11434}
+      OLLAMA_MODEL: ${OLLAMA_MODEL:-qwen3.5:4b}
+      OLLAMA_MOTION_REWRITE: ${OLLAMA_MOTION_REWRITE:-true}
+      HY_MOTION_ENABLED: ${HY_MOTION_ENABLED:-false}
+      HY_MOTION_WORKER_URL: ${HY_MOTION_WORKER_URL:-}
+    volumes:
+      - motion-data:/data
+    ports:
+      - "8002:8002"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8002/health')"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+  agent-backend:
+    build: ./agent-backend
+    environment:
+      MEMORY_SERVICE_URL: http://memory-service:8001
+      MOTION_SERVICE_URL: http://motion-service:8002
+      SESSION_DATABASE_PATH: /data/sessions.db
+      DESKAURA_CONFIG_PATH: /data/config.json
+      LLM_BASE_URL: ${LLM_BASE_URL:-https://api.openai.com/v1}
+      LLM_API_KEY: ${LLM_API_KEY:-}
+      LLM_MODEL: ${LLM_MODEL:-gpt-4o-mini}
+    volumes:
+      - agent-data:/data
+    ports:
+      - "8000:8000"
+    depends_on:
+      memory-service:
+        condition: service_healthy
+      motion-service:
+        condition: service_healthy
+  frontend:
+    build: ./companion-frontend
+    ports:
+      - "5173:80"
+    depends_on:
+      - agent-backend
+volumes:
+  memory-data:
+  motion-data:
+  agent-data:

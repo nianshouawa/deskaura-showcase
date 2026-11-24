@@ -1,0 +1,43 @@
+{
+  "version": "1.0.0",
+  "models": [
+    {
+      "id": "builtin-yuki",
+      "name": "结海 (Yuika)",
+      "file": "yuki.vrm",
+      "url": "/builtin-models/yuki.vrm",
+      "size": 17642724,
+      "description": "DeskAura 内置默认角色 · 活泼灵动的日常陪伴助手",
+      "author": "minto_akayama",
+      "license": "VRoid Hub 许可 (允许再分发、商业使用、必须署名)",
+      "license_url": "https://hub.vroid.com/characters/6016654817173699195/models/6936306532454655938",
+      "attribution_required": true,
+      "features": {
+        "bones": 53,
+        "eye_bones": true,
+        "blendshapes": 17,
+        "gaze_tracking": true,
+        "visemes": true
+      }
+    },
+    {
+      "id": "builtin-shibu",
+      "name": "千駄ヶ谷渋 (Shibu)",
+      "file": "shibu.vrm",
+      "url": "/builtin-models/shibu.vrm",
+      "size": 16851352,
+      "description": "VRoid 官方示例内置角色 · 沉稳知性的日常陪伴",
+      "author": "VRoidプロジェクト",
+      "license": "VRoid Hub 许可 (允许再分发、商业使用、无需强制署名)",
+      "license_url": "https://vroid.com/",
+      "attribution_required": false,
+      "features": {
+        "bones": 54,
+        "eye_bones": true,
+        "blendshapes": 15,
+        "gaze_tracking": true,
+        "visemes": true
+      }
+    }
+  ]
+}

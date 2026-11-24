@@ -1,0 +1,189 @@
+{
+  "version": 2,
+  "model": "HY-Motion-1.0",
+  "source": "AutoDL HY-Motion-1.0",
+  "motions": [
+    {
+      "id": "cloud_idle",
+      "name": "自然待机",
+      "loop": true,
+      "duration": 8,
+      "prompt": "A person stands comfortably in place with arms relaxed at the sides, breathing gently and shifting weight very slightly, calm and still."
+    },
+    {
+      "id": "cloud_thinking_loop",
+      "name": "持续思考",
+      "loop": true,
+      "duration": 8,
+      "prompt": "A person stands in place thinking quietly, one arm folded across the waist supporting the other elbow, one hand resting near the chin, head slightly tilted with slow small thoughtful nods."
+    },
+    {
+      "id": "cloud_think",
+      "name": "思索一下",
+      "loop": false,
+      "duration": 5,
+      "prompt": "A person standing still slowly brings one hand to the chin, tilts the head thoughtfully, pauses, then gently lowers the hand to the side."
+    },
+    {
+      "id": "cloud_wave",
+      "name": "友好挥手",
+      "loop": false,
+      "duration": 5,
+      "prompt": "A person standing in place slowly raises the right hand to shoulder height, gives two gentle friendly waves, then lowers the arm naturally."
+    },
+    {
+      "id": "cloud_nod",
+      "name": "点头回应",
+      "loop": false,
+      "duration": 4,
+      "prompt": "A person standing comfortably still gives two small slow nods of agreement, keeping the arms relaxed at the sides."
+    },
+    {
+      "id": "cloud_bow",
+      "name": "礼貌鞠躬",
+      "loop": false,
+      "duration": 5,
+      "prompt": "A person standing with feet planted and hands together low in front gives a small slow polite bow, pauses briefly, then returns upright."
+    },
+    {
+      "id": "cloud_clap",
+      "name": "轻轻鼓掌",
+      "loop": false,
+      "duration": 5,
+      "prompt": "A person standing in place brings both hands together in front of the chest, claps gently three times, then lowers the hands naturally."
+    },
+    {
+      "id": "cloud_celebrate",
+      "name": "开心庆祝",
+      "loop": false,
+      "duration": 6.0,
+      "prompt": "A very happy person makes three joyful little jumps straight up in place, cheering with both arms spread wide in a broad upward V. Both hands stay far apart, much wider than the shoulders, never meeting above the head. Open both arms out diagonally upward, bend the elbows down between jumps, then spread them wide upward again. Land softly in the same spot and relax the arms. No turning, no walking, no arms held together, no surrender pose."
+    },
+    {
+      "id": "cloud_point",
+      "name": "指向介绍",
+      "loop": false,
+      "duration": 7.0,
+      "prompt": "A person stands still facing forward. Slowly raise the right arm forward and outward to the right at shoulder level and point clearly with the right index finger extended, all other fingers curled. Hold that pointing direction steadily for four seconds, then slowly lower the right arm. Keep a comfortable slight bend in the elbow. The left arm hangs loose outside the left thigh for the entire motion, wrist straight. Feet planted, no body turn, no crossed hands and no hand on the hip."
+    },
+    {
+      "id": "cloud_shrug",
+      "name": "轻轻耸肩",
+      "loop": false,
+      "duration": 4,
+      "prompt": "A person standing in place slowly raises both shoulders and turns both palms upward near the waist in a gentle shrug, then relaxes."
+    },
+    {
+      "id": "cloud_emotion_neutral",
+      "name": "正常回答",
+      "emotion": "neutral",
+      "loop": true,
+      "duration": 8,
+      "prompt": "A person stands in place having a relaxed conversation, hands loosely in front of the waist making occasional small open palm gestures and gentle nods."
+    },
+    {
+      "id": "cloud_emotion_happy",
+      "name": "开心回答",
+      "emotion": "happy",
+      "loop": true,
+      "duration": 8,
+      "prompt": "A cheerful person stands in place talking happily with relaxed open shoulders, gentle lively gestures with both open hands at chest height and small upbeat nods."
+    },
+    {
+      "id": "cloud_emotion_sad",
+      "name": "伤心回答",
+      "emotion": "sad",
+      "loop": true,
+      "duration": 8,
+      "prompt": "A sad person stands still speaking quietly, head slightly bowed and shoulders drooping, hands loosely clasped low in front of the abdomen with slow small head movements."
+    },
+    {
+      "id": "cloud_emotion_angry",
+      "name": "生气回答",
+      "emotion": "angry",
+      "loop": true,
+      "duration": 8.0,
+      "prompt": "An angry person stands facing forward with a firm posture and clenched fists. Both arms stay low and straight beside the thighs throughout. The person slowly shakes the head twice in strong disagreement, then nods firmly once while speaking sternly. Both shoulders tense and relax slightly. Both fists remain below the waist outside their own thighs, never on the hips. Feet planted in one spot, chest upright."
+    },
+    {
+      "id": "cloud_emotion_nervous",
+      "name": "紧张回答",
+      "emotion": "nervous",
+      "loop": true,
+      "duration": 8.0,
+      "prompt": "A nervous person stands in place speaking hesitantly, with both arms hanging down loosely beside the thighs for the entire motion. Both hands stay low and apart. The shoulders slowly rise in a small timid shrug then relax, twice. The head dips slightly and glances a little left then back forward. Small natural breathing. Both elbows remain nearly straight and both hands stay beside their own thighs. Feet still."
+    },
+    {
+      "id": "cloud_emotion_serious",
+      "name": "严肃回答",
+      "emotion": "serious",
+      "loop": true,
+      "duration": 8.0,
+      "prompt": "A serious person stands upright in one spot explaining something calmly. The left arm hangs straight down beside the left thigh. The right elbow bends slightly with the open right palm facing down at low waist height outside the right side of the body, making two very small downward emphasis gestures. A small firm head nod. Feet remain still and both hands stay far apart below the chest throughout."
+    },
+    {
+      "id": "cloud_emotion_fearful",
+      "name": "恐惧回答",
+      "emotion": "fearful",
+      "loop": true,
+      "duration": 8,
+      "prompt": "A frightened person stands in place speaking cautiously, shoulders raised and torso leaning slightly back, elbows close to the body with both open hands held defensively near the chest."
+    },
+    {
+      "id": "cloud_emotion_surprised",
+      "name": "惊讶回答",
+      "emotion": "surprised",
+      "loop": true,
+      "duration": 8,
+      "prompt": "A surprised person stands in place talking with raised open palms near shoulder height, head held alert and tilted slightly back, hands slowly lowering and opening again in mild disbelief."
+    },
+    {
+      "id": "cloud_emotion_disgusted",
+      "name": "厌恶回答",
+      "emotion": "disgusted",
+      "loop": true,
+      "duration": 8,
+      "prompt": "A displeased person stands in place speaking with mild disgust, head turned slightly aside and torso leaning back a little, one hand making slow restrained dismissive gestures away from the body."
+    },
+    {
+      "id": "cloud_emotion_shy",
+      "name": "害羞回答",
+      "emotion": "shy",
+      "loop": true,
+      "duration": 8.0,
+      "prompt": "A shy person stands still speaking softly with the head tilted a little to the left and the chin gently lowered. Both arms hang relaxed beside their own thighs, with elbows nearly straight throughout. The right hand turns slightly palm-forward beside the right thigh and relaxes again. The left hand remains loose beside the left thigh. Small bashful head tilts and tiny nods, relaxed shoulders, body upright and feet planted."
+    },
+    {
+      "id": "cloud_emotion_tired",
+      "name": "疲倦回答",
+      "emotion": "tired",
+      "loop": true,
+      "duration": 8,
+      "prompt": "A tired person stands quietly in place speaking slowly, shoulders relaxed and slightly slumped, arms hanging loosely at the sides, head gently dipping with slow breathing."
+    },
+    {
+      "id": "cloud_emotion_curious",
+      "name": "好奇回答",
+      "emotion": "curious",
+      "loop": true,
+      "duration": 8,
+      "prompt": "A curious person stands in place leaning forward slightly, head tilted attentively, one open palm raised near the chest in a small questioning gesture while listening and talking."
+    },
+    {
+      "id": "cloud_emotion_confident",
+      "name": "自信回答",
+      "emotion": "confident",
+      "loop": true,
+      "duration": 8.0,
+      "prompt": "A stationary person talks confidently with both feet planted firmly in the same spot throughout. The right forearm is bent forward with its palm up outside the right waist, making very small slow explanatory gestures. The left arm hangs loosely at the left side, hand outside the thigh. Shoulders open, head level. Body upright and still, hands separate and never on the hips."
+    },
+    {
+      "id": "cloud_emotion_affectionate",
+      "name": "撒娇回答",
+      "emotion": "affectionate",
+      "loop": true,
+      "duration": 8.0,
+      "prompt": "A sweet playful person stands still and speaks with a tilted head and a gentle little nod. The left arm hangs loosely beside the left thigh throughout. The right arm stays beside the right side with a slightly bent elbow, and the right hand gives a tiny gentle wave outside the right hip at low waist height. Both hands are always far apart, below the waist and outside the body. Feet planted in place. The torso remains upright."
+    }
+  ]
+}

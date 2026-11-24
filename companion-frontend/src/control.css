@@ -1,0 +1,59 @@
+/* The home control panel fits the normal and minimum studio heights. */
+.studio-nav-link{display:inline-flex;align-items:center;gap:8px;padding:7px 3px}
+.studio-nav-link>svg{width:19px;height:19px;flex:0 0 19px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.studio-settings{padding:21px 18px 16px;overflow:visible;min-height:0}
+.studio-settings>h2{margin:6px 0 18px}
+.desktop-module-panel{gap:12px}
+.home-desktop-controls{padding:0 0 16px;gap:13px}
+.home-interaction-checks{display:grid;grid-template-columns:1fr 1fr;gap:10px 24px}
+.home-tracking-mode{align-self:stretch}
+.studio-settings .role-module-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px 18px;padding:4px 0}
+.studio-settings .local-operation-panel{border-top:0;padding-top:0}
+.studio-settings .local-policy-grid{border-top:1px solid #ffffff0b;padding-top:10px}
+.studio-settings .role-module-item{gap:7px;min-width:0}
+.studio-settings .module-status-link{gap:6px;padding:7px 0!important}
+.module-name-line{display:flex;align-items:center;gap:6px;min-width:0}
+.module-name-line>strong{flex:0 0 auto}
+.module-tag{display:inline-block;max-width:140px;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding:0 5px;border-radius:4px;background:#78629c20;color:#a99ac8;font-size:9px;line-height:17px}
+.studio-settings .module-tag{max-width:49px;padding:0 3px;font-size:8px}
+.studio-settings .module-status-link small{font-size:9px}
+.studio-settings .module-panel-actions button{padding:7px 10px!important}
+.studio-settings .module-panel-notice{padding:5px 8px;max-height:none;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;line-height:1.6}
+.local-operation-panel{display:flex;flex-direction:column;gap:12px;min-width:0;border-top:1px solid #ffffff0b;padding-top:16px}
+.local-operation-panel h3{margin:0;font-size:12px;font-weight:500;color:#c3bddb}
+.local-policy-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px}
+.local-operation-panel label{display:flex;flex-direction:column;gap:7px;font-size:11px;color:#9da7c1;min-width:0}
+.local-operation-panel .directory-field{display:flex;flex-wrap:nowrap;gap:6px}
+.local-operation-panel .directory-field input{width:0;min-width:0;flex:1;font-size:11px;padding:8px 9px;border:1px solid #34394e;border-radius:8px;background:#10121c;color:#d5d9ea}
+.local-operation-panel .directory-field>button{padding:7px 10px;font-size:11px;white-space:nowrap}
+.local-operation-panel .picker-value,.local-operation-panel .picker-arrow{border:0;background:transparent;color:#c5c9dc}
+.local-operation-panel .picker-value{display:flex;align-items:center;text-align:left;min-width:0;flex:1;padding:8px 10px}
+.local-operation-panel .picker-arrow{display:grid;place-items:center;width:30px;flex:0 0 30px;padding:0}
+.local-operation-panel .picker-menu button{display:flex;width:100%;padding:8px;text-align:left;border:0;border-radius:6px;background:transparent;color:#bdc5df}
+.local-operation-panel .picker-menu button.highlighted{background:#302a44}
+.local-operation-notice{margin:0;color:#ba9fce;font-size:10px;line-height:1.5;overflow-wrap:anywhere}
+.local-operation-panel.compact{gap:10px;padding-top:13px}
+.local-operation-panel.compact .picker-control{min-height:33px}
+.studio-settings .local-operation-notice{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media(max-height:700px){
+  .studio-settings{padding:10px 15px 7px}
+  .studio-settings>h2{margin:5px 0 8px;font-size:17px}
+  .desktop-module-panel{gap:6px}
+  .home-desktop-controls{gap:10px;padding-bottom:11px}
+  .home-interaction-checks{gap:7px 20px}
+  .studio-settings .role-module-grid{gap:0 15px;padding:2px 0}
+  .studio-settings .module-status-link{padding:3px 0!important}
+  .studio-settings .module-copy{line-height:1.35}
+  .studio-settings .module-panel-actions button{padding:6px 10px!important}
+  .studio-settings .module-panel-notice{padding:3px 7px;line-height:1.4;font-size:9px}
+  .local-operation-panel.compact{padding-top:10px;gap:8px}
+  .local-operation-panel.compact label{gap:5px}
+  .local-operation-panel.compact .picker-control{min-height:31px}
+  .studio-settings .local-operation-panel .picker-value{padding:6px 8px!important}
+  .local-operation-panel.compact .directory-field input{padding:6px 8px}
+  .local-operation-panel.compact .directory-field>button{padding:5px 9px}
+}
+
+.home-tracking-picker{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:10px}
+.home-tracking-picker>span{font-size:11px;font-weight:400;color:#9da7c1;white-space:nowrap}
+.home-tracking-picker .config-picker{min-width:0}
