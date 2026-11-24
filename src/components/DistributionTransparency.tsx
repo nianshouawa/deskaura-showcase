@@ -13,7 +13,7 @@ import {
 export const DistributionTransparency: React.FC = () => {
   const [copiedSha, setCopiedSha] = useState(false);
 
-  const sha256Value = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855";
+  const sha256Value = "1b4aa77417a452dd82a8841cbc453e29048574b9b7feddd491f8483eab10056d";
 
   const handleCopySha = () => {
     navigator.clipboard.writeText(sha256Value);
@@ -30,7 +30,7 @@ export const DistributionTransparency: React.FC = () => {
     {
       title: '角色模型与 API Key 自备授权',
       status: '开源合规',
-      desc: '为恪守版权与服务商条款，DeskAura 安装包绝不内置任何受版权保护的商业动漫角色模型（如第三方 IP VRM 文件）或开发者私人 API Key。普通启动与内置本地模型无需配置环境，云端调用由使用者自行填入。',
+      desc: '开箱内置两款开源合规的 VRM 角色模型（结海 Yuki 与 AvatarSample_1 Shibu），绝不内置任何受版权争议的商业 IP 模型或开发者私人 API Key。开箱即用无需环境配置，云端调用由使用者自行填入。',
     },
     {
       title: '系统权限与沙箱执行边界',
@@ -82,7 +82,7 @@ export const DistributionTransparency: React.FC = () => {
                   </span>
                 </div>
                 <span className="text-xs font-mono-code text-[#64748B]">
-                  约 239.76 MB
+                  约 256.30 MB
                 </span>
               </div>
 
@@ -94,7 +94,7 @@ export const DistributionTransparency: React.FC = () => {
               </div>
 
               <p className="text-xs sm:text-sm text-[#94A3B8] leading-relaxed mb-6">
-                适合所有普通 Windows 用户。包含桌面主程序、三大 Python 后端微服务、内置 BGE 中文嵌入模型、SenseVoice 离线语音模型与 25 组动作库。支持中文/英文安装向导与干净卸载。
+                适合所有普通 Windows 用户。内置两款合规开源 VRM 模型（结海、千駄ヶ谷渋）、三大 Python 后端微服务、BGE 中文嵌入模型、SenseVoice 离线语音模型与 25 组动作库，开箱即用。支持安装向导与干净卸载。
               </p>
 
               <div className="space-y-2 text-xs font-mono-code text-[#CBD5E1] mb-6">
@@ -137,7 +137,7 @@ export const DistributionTransparency: React.FC = () => {
                   </span>
                 </div>
                 <span className="text-xs font-mono-code text-[#64748B]">
-                  约 17.14 MB
+                  约 32.78 MB
                 </span>
               </div>
 
@@ -149,7 +149,7 @@ export const DistributionTransparency: React.FC = () => {
               </div>
 
               <p className="text-xs sm:text-sm text-[#94A3B8] leading-relaxed mb-6">
-                适合开发者与高级技术评委。解压即可直接双击运行，配置文件与数据就近保存在程序同级目录的 <code className="text-[#2DD4BF] font-mono-code">DeskAura-Data</code>，方便移动至 U 盘或快速进行二次开发与测试。
+                适合开发者与高级技术评委。内含独立运行环境与两款内置 VRM 模型，直接双击运行，配置文件与数据就近保存在同级目录的 <code className="text-[#2DD4BF] font-mono-code">DeskAura-Data</code>，方便随 U 盘携带或离线演示。
               </p>
 
               <div className="space-y-2 text-xs font-mono-code text-[#CBD5E1] mb-6">

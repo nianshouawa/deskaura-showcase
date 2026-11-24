@@ -23,16 +23,20 @@
 | **5. 硬件生命周期安全与隐私隔离** | **✅ 100% 交付** | `src-tauri/src/hardware/lease.rs`<br>`src/services/CameraLease.ts` | 独创 CameraLease 租约模式，Tab 离开或关闭即刻触发 `track.stop()` 物理熄灯，不留驻留句柄。 |
 | **6. 桌面无感交互与空间约束** | **✅ 100% 交付** | `src-tauri/src/window.rs`<br>`src/utils/CameraBounds.ts` | Win32 `WS_EX_LAYERED` 透明穿透、鼠标防误触穿透，恒定包围球技术彻底根除缩放抖动与出画异常。 |
 | **7. 离线端侧语音听觉** | **✅ 100% 交付** | `agent-backend/audio/sensevoice.py` | 集成 SenseVoice ONNX 离线语音听觉模型，毫秒级断句与流式逐句朗读打断机制。 |
-| **8. 工程落地与双形态分发** | **✅ 100% 交付** | [站内 Releases 专区](https://www.synnovator.com/qiujiatan/deskaura-showcase/releases/tag/v0.1.0) | 提供 [NSIS 完整安装包 (240MB)](https://www.synnovator.com/qiujiatan/deskaura-showcase/releases/download/v0.1.0/DeskAura_0.1.0_x64-setup.exe) 与 [绿色免安装便携版 (16MB)](https://www.synnovator.com/qiujiatan/deskaura-showcase/releases/download/v0.1.0/deskaura.exe)，内置独立微服务环境。 |
+| **8. 工程落地与双形态分发** | **✅ 100% 交付** | [GitHub Releases](https://github.com/nianshouawa/deskaura-showcase/releases/tag/v0.1.0) / [站内专区](https://www.synnovator.com/qiujiatan/deskaura-showcase/releases/tag/v0.1.0) | 提供 [NSIS 完整安装包 (256MB)](https://github.com/nianshouawa/deskaura-showcase/releases/download/v0.1.0/DeskAura_0.1.0_x64-setup.exe) 与 [绿色免安装便携版 (33MB)](https://github.com/nianshouawa/deskaura-showcase/releases/download/v0.1.0/deskaura.exe)，内置独立微服务与合规 VRM 角色模型。 |
 | **9. 线上展示与可交互验证沙箱** | **✅ 100% 交付** | `deskaura-showcase/src/` | 线上网页原生复刻 3D 操控、实时人脸视线求解、离线朗读与 25 组动作状态机（已上线 GitHub Pages）。 |
 | **10. 演示视频与录制工程** | **✅ 100% 交付** | `demo_media/my-video/`<br>`DeskAura 比赛用桌面宠物 DEMO 录制全流程教程.docx` | 完备的 Remotion 代码视频工程与录屏操作全流程指引。 |
 
-### 📥 站内安装包极速下载直链（Windows x64）
+### 📥 安装包极速下载直链（Windows x64）
 
-| 分发形态 | 推荐度 | 文件名 | 体积 | 特性说明 | 站内直接下载 |
-| :--- | :---: | :--- | :---: | :--- | :---: |
-| **NSIS 一键安装包** | ⭐ 推荐普通用户 | `DeskAura_0.1.0_x64-setup.exe` | 240 MiB | 内置独立 Python 3.12、SenseVoice 听觉模型、25 组动作库，开箱即用 | [点击下载安装包](https://www.synnovator.com/qiujiatan/deskaura-showcase/releases/download/v0.1.0/DeskAura_0.1.0_x64-setup.exe) |
-| **免安装便携版** | ⭐ 现场评审演示 | `deskaura.exe` | 16 MiB | 极客评测与便携免安装，解压即双击运行，数据就近保存无系统残留 | [点击下载便携版](https://www.synnovator.com/qiujiatan/deskaura-showcase/releases/download/v0.1.0/deskaura.exe) |
+| 分发形态 | 推荐度 | 文件名 | 体积 | 特性说明 | GitHub 下载 | 协创者号站内下载 |
+| :--- | :---: | :--- | :---: | :--- | :---: | :---: |
+| **NSIS 一键安装包** | ⭐ 推荐普通用户 | `DeskAura_0.1.0_x64-setup.exe` | 256 MiB | 内置两款合规开源 VRM 模型、独立 Python 3.12、SenseVoice 听觉模型与 25 组动作库，开箱即用 | [GitHub 下载](https://github.com/nianshouawa/deskaura-showcase/releases/download/v0.1.0/DeskAura_0.1.0_x64-setup.exe) | [站内下载](https://www.synnovator.com/qiujiatan/deskaura-showcase/releases/download/v0.1.0/DeskAura_0.1.0_x64-setup.exe) |
+| **免安装便携版** | ⭐ 现场评审演示 | `deskaura.exe` | 33 MiB | 极客评测与便携免安装，内置两款模型，解压即双击运行，数据就近保存无残留 | [GitHub 下载](https://github.com/nianshouawa/deskaura-showcase/releases/download/v0.1.0/deskaura.exe) | [站内下载](https://www.synnovator.com/qiujiatan/deskaura-showcase/releases/download/v0.1.0/deskaura.exe) |
+
+> 校验码参考（SHA-256）：  
+> `DeskAura_0.1.0_x64-setup.exe`: `1b4aa77417a452dd82a8841cbc453e29048574b9b7feddd491f8483eab10056d`  
+> `deskaura.exe`: `9ac88df268f971f9f27a85108c8d552d61ceb5aa723ea28fe450f2e4fbca2465`
 
 ---
 
@@ -229,7 +233,7 @@ DeskAura 采用“原生宿主 + 现代渲染 + 独立微服务集群”的三�
 * [x] **M1 具身动作与核心渲染**：完成 Three-VRM 骨骼重定向与 25 组动作库精校；
 * [x] **M2 视线追踪与记忆闭环**：端侧 BlazeFace WASM 集成，MemU 向量记忆联调；
 * [x] **M3 演示网站与在线沙箱**：基于 Vite + Tailwind v4 打造的 Showcase 交互站全量上线；
-* [x] **M4 双端分发与交付封装**：生成 NSIS 一键安装包（240MB）与绿色便携版二进制产物（16MB），已发布于 [SynNovator 站内 Releases](https://www.synnovator.com/qiujiatan/deskaura-showcase/releases/tag/v0.1.0)。
+* [x] **M4 双端分发与交付封装**：生成 NSIS 一键安装包（256MB）与绿色便携版二进制产物（33MB），已发布于 [GitHub Releases](https://github.com/nianshouawa/deskaura-showcase/releases/tag/v0.1.0) 与 [SynNovator 站内 Releases](https://www.synnovator.com/qiujiatan/deskaura-showcase/releases/tag/v0.1.0)。
 
 ---
 

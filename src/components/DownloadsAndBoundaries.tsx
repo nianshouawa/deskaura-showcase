@@ -5,7 +5,7 @@ import { Download, Copy, Check, FileCode2, Monitor } from 'lucide-react';
 export const DownloadsAndBoundaries: React.FC = () => {
   const [copied, setCopied] = useState(false);
   const [copiedLink, setCopiedLink] = useState(false);
-  const sha256 = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855";
+  const sha256 = "1b4aa77417a452dd82a8841cbc453e29048574b9b7feddd491f8483eab10056d";
 
   const handleCopy = () => {
     navigator.clipboard.writeText(sha256);
@@ -21,7 +21,7 @@ export const DownloadsAndBoundaries: React.FC = () => {
 
   const boundaries = [
     '安装包尚未进行代码签名，首次运行时 Windows Defender / SmartScreen 可能提示“未知发布者”，核对 SHA-256 后选择“仍要运行”即可。',
-    '仓库与安装包不内置第三方受版权保护的 VRM/GLB 模型与云端 API Key，需使用者自行导入拥有使用授权的资源。',
+    '开箱内置两款开源合规的 VRM 角色模型（结海 Yuki、AvatarSample_1 Shibu），绝不内置未授权的商业 IP 模型与云端 Key，其他模型需自备授权。',
     '关闭系统沙箱执行本机命令时按当前 Windows 用户权限运行，不能把已授权的工作区目录当作系统级沙箱隔离。',
     'MediaPipe BlazeFace WASM 仅提取 6 个面部关键点计算头部眼骨对准屏幕中心，不具备人脸身份甄别能力。',
     '界面状态点保留上一次主动检测的结果，不保证服务实时在线，不伪造虚假绿灯。'
@@ -55,7 +55,7 @@ export const DownloadsAndBoundaries: React.FC = () => {
             <div>
               <div className="flex items-center justify-between pb-3 mb-4 border-b border-[var(--border-hairline)] text-xs">
                 <span className="text-[var(--accent-signal)] font-bold font-sans-ui">// 推荐形态</span>
-                <span className="text-[var(--text-muted)] font-sans-ui">约 239.76 MB</span>
+                <span className="text-[var(--text-muted)] font-sans-ui">约 256.30 MB</span>
               </div>
 
               <h3 className="font-sans-ui font-bold text-xl text-[var(--text-primary)] mb-1">
@@ -66,7 +66,7 @@ export const DownloadsAndBoundaries: React.FC = () => {
               </div>
 
               <p className="body-reading text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed mb-6">
-                面向普通用户。内置完整的独立 Python 3.12 微服务环境、BGE 中文轻量级嵌入模型、SenseVoice 离线语音听觉模型与 25 组离线动作库。无需配置 Python 或 Node.js 环境。
+                面向普通用户。内置两款合规开源 VRM 模型、独立 Python 3.12 微服务环境、BGE 中文嵌入模型、SenseVoice 离线听觉模型与 25 组动作库，开箱即用无需环境配置。
               </p>
             </div>
 
@@ -89,7 +89,7 @@ export const DownloadsAndBoundaries: React.FC = () => {
             <div>
               <div className="flex items-center justify-between pb-3 mb-4 border-b border-[var(--border-hairline)] text-xs">
                 <span className="text-[var(--text-secondary)] font-bold font-sans-ui">// 便携形态</span>
-                <span className="text-[var(--text-muted)] font-sans-ui">约 17.14 MB</span>
+                <span className="text-[var(--text-muted)] font-sans-ui">约 32.78 MB</span>
               </div>
 
               <h3 className="font-sans-ui font-bold text-xl text-[var(--text-primary)] mb-1">
@@ -100,7 +100,7 @@ export const DownloadsAndBoundaries: React.FC = () => {
               </div>
 
               <p className="body-reading text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed mb-6">
-                面向开发者与现场评委演示。解压即可直接双击运行，配置与会话数据就近保存在同级 DeskAura-Data 目录，不污染系统环境。
+                面向开发者与现场评委演示。内置两款 VRM 角色模型，解压即可直接双击运行，配置与会话数据就近保存在同级 DeskAura-Data 目录，不污染系统环境。
               </p>
             </div>
 
